@@ -22,9 +22,10 @@
 
 \maketitle
 
-\section{Important Clarifications}
+\section{Important Clarifications - Check with Frank/Leonid}
 \begin{itemize}
     \item Is detection as defined by the BAA a multi-object task? If we are only focusing on placing bounding boxes on a single object in the image, then we may (with lots of emphasis on the may) need to update some assumptions.
+    \item In the object detection case, how are number of labels defined? Is an image with 5 distinct object instances, each having separate boundary boxes one label? Are the boundary boxes each a label regardless of how many there are in a single image? Are we supposed to account for either case? Then in the active learning case, do we get to request for all object instances and their boundary boxes in a single photo?
 \end{itemize}
 
 \section{Important (Unconventional) Notes from BAA}
@@ -35,7 +36,7 @@
         \includegraphics[width=6in]{Goals.png}
         \caption{DARPA goals and milestones defined on the four noted tasks.}
         \label{goals}
-    \end{figure}[t]
+    \end{figure}
     \item It's important to note that similar to other works in few-shot learning, we are able to leverage external publicly available dataset(s) or corpoa in enhancing performance. Additionally, it's noted that "[these] algorithms can make use of as much unlabeled data as they wish and they may choose specific examples for labeling". Thus, active learning is not only an option but seems to be encouraged throughout the BAA. It's not specified where the limit is drawn on amount on unlabeled data available but it's fair to be presumed to be orders of magnitude higher than the labeled amount.
 \end{itemize}
 
@@ -118,6 +119,12 @@
             \end{itemize}
         \end{itemize}
     \end{itemize}
+    
+\section{Datasets}
+\begin{itemize}
+    \item \textbf{The DARPA challenge with respect to object classification and detection focuses on the image dataset from ImageNet Large Scale Visual Recognition Challenge (ILSVRC).} An in-depth description of the dataset has been included as part of the dataset description.
+    \item \textbf{The dataset for the adaptation task has yet to be announced.}
+\end{itemize}
     
 \bibliographystyle{plain}
 \bibliography{citations}
